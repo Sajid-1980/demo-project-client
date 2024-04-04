@@ -1,0 +1,43 @@
+<div class="p-8 mt-4">
+  <div class="shadow p-6">
+    @if(isEdit){<h4>Product Update</h4>}
+    @else{
+      <div class="flex justify-center p-4 bg-gray-300"><h2><b>Product Create</b></h2></div>
+    }
+
+    <div class="card-body">
+      <form [formGroup]="requestForm">
+        <div class="w-full flex flex-wrap">
+          <mat-form-field class="w-full">
+            <mat-label>Product Name</mat-label>
+            <input matInput type="text" formControlName="productName">
+          </mat-form-field>   
+        </div>
+        <div class="w-full flex flex-wrap">
+          <mat-form-field class="w-full">
+            <mat-label>Product Description</mat-label>
+            <input matInput type="text" formControlName="productDescription">
+          </mat-form-field>
+        </div>
+        <div class="w-full flex flex-wrap">
+          <mat-form-field class="w-full">
+            <mat-label>Product Quantity</mat-label>
+            <input matInput type="number" formControlName="productQuontity">
+          </mat-form-field>
+        </div>
+      </form>
+    </div>
+    @if(isEdit){
+      <div class="flex justify-start">
+        <button mat-raised-button color="primary" (click)="editProduct()" [disabled]="requestForm.invalid">Update Product</button>
+      </div>
+    }
+    @else {
+      <div class="flex justify-start">
+        <button mat-raised-button color="primary" (click)="saveForm()" [disabled]="requestForm.invalid">Save Product</button>
+        <button mat-raised-button color="primary" (click)="restartForm()" class="ml-2">Reset</button>
+      </div>
+    }
+
+  </div>
+</div>

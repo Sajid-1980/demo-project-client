@@ -1,0 +1,35 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button class="example-icon" routerLink="/" >
+    <mat-icon>home</mat-icon>
+  </button>
+  <span>Product Creation App</span>
+
+  <mat-nav-list class="list-horizontal" style="margin-left: 10px;">
+    <mat-list-item style="background-color: rgb(178, 200, 218); border-radius: 5px;">
+     <button mat-menu-item routerLink="/" >Home</button>
+   </mat-list-item>
+ </mat-nav-list>
+ <mat-nav-list class="list-horizontal" style="margin-left: 10px;">
+  <mat-list-item style="background-color: rgb(178, 200, 218); border-radius: 5px;">
+   <button mat-menu-item routerLink="product-create" >Create Product</button>
+ </mat-list-item>
+</mat-nav-list>
+<mat-nav-list class="list-horizontal" style="margin-left: 10px;">
+  <mat-list-item style="background-color: rgb(178, 200, 218); border-radius: 5px;">
+   <button mat-menu-item routerLink="product-purchase">Purchase Product</button>
+ </mat-list-item>
+</mat-nav-list>
+<mat-nav-list class="list-horizontal" style="margin-left: 10px;">
+  <mat-list-item style="background-color: rgb(178, 200, 218); border-radius: 5px;">
+   <button mat-menu-item routerLink="product-sale">Product Sale</button>
+ </mat-list-item>
+</mat-nav-list>
+
+
+</mat-toolbar>
+
+<div class="w-full px-36 py-8">
+  <router-outlet></router-outlet>
+</div>
+
+
